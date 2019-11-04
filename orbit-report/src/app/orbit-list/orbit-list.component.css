@@ -1,0 +1,33 @@
+.sortable {
+    cursor: pointer;
+    color: #dd5;
+}
+
+.warning {
+    background-color: #da8a8a;
+}
+
+table {
+  color: #111;
+  overflow: hidden;
+  margin: 12px 0;
+  min-width: 300px;
+  background: #eee;
+}
+
+.header-row {
+    background: #34495E;
+    color: #fff
+}
+
+th, td {
+    text-align: left;
+    margin: 5px 10px;
+    padding: 6px;
+    border-right: 1px solid #fff;
+}
+
+tr:nth-child(2n){
+    background-color: #222;
+    color: #fff;
+}

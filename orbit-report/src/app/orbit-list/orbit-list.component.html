@@ -1,0 +1,23 @@
+<h3>Orbit Report Baby</h3>
+
+<tr *ngIf="empty"class="header-row">
+    <th>Search "{{search}}" resulted in no values found. </th>
+</tr>
+<table *ngIf="!empty">
+    
+    <tr class="header-row">
+        <th class="sortable" (click)="sort('name')">Name</th>
+        <th class="sortable" (click)="sort('type')">Type</th>
+        <th>Operational</th>
+        <th>Orbit Type</th>
+        <th>Launch Date</th>
+    </tr>
+
+    <tr *ngFor="let satellite of satellites">
+        <td>{{satellite.name}}</td>
+        <td [class.warning]="satellite.shouldShowWarning(satellite.type)">{{satellite.type}}</td>
+        <td>{{satellite.operational}}</td>
+        <td>{{satellite.orbitType}}</td>
+        <td>{{satellite.launchDate}}</td>
+    </tr>
+</table>
